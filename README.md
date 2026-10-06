@@ -17,7 +17,7 @@ Predicts whether a patient has heart disease from **4 input attributes** of the 
 **Test accuracy: 0.79** (61 held-out patients; precision/recall/F1 0.79).
 
 ## Live Demo
-**https://heart-disease-predictor.streamlit.app** *(replace with your own Streamlit URL after deploying; see `streamlit-app/README.md`)*
+**https://heart-disease-hunain.streamlit.app/** *(replace with your own Streamlit URL after deploying; see `streamlit-app/README.md`)*
 
 ## Contents
 - [`2 - Heart Disease Prediction`](./2%20-%20Heart%20Disease%20Prediction) — notebook (`.ipynb` + `.html`), dataset, encoded CSVs, predictions and the trained model `svc_trained_model.pkl`
