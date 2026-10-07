@@ -4,9 +4,10 @@ An end-to-end **Machine Learning project for heart disease prediction**, develop
 
 The project follows a complete machine learning workflow, starting from data loading and preprocessing and ending with a deployed Streamlit web application.
 
-> **Educational project only:** This system is developed for academic and learning purposes. It is **not a medical diagnostic tool** and should not be used for making real-world medical decisions.
+### Live Demo
 
----
+**[Heart Disease Prediction — Streamlit App](https://heart-disease-hunain-uci.streamlit.app/)**
+
 
 ## Project Information
 
@@ -194,9 +195,6 @@ After submitting the information, the application processes the inputs using the
 
 The resulting prediction is then displayed to the user.
 
-### Live Demo
-
-**[Heart Disease Prediction — Streamlit App](https://heart-disease-hunain-uci.streamlit.app/)**
 
 
 ---
