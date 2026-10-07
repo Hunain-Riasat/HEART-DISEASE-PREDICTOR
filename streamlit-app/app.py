@@ -120,7 +120,6 @@ with st.sidebar:
     st.markdown("**Inputs**  \n4 attributes: Gender, Exercise Angina, ST Depression, Major Vessels")
     st.markdown("**Output**  \nHeart disease: Yes / No")
     st.divider()
-    st.warning("Educational demo only. Not a medical diagnosis.", icon="⚠️")
 
 # ---------------------------------------------------------------------------
 # Hero
