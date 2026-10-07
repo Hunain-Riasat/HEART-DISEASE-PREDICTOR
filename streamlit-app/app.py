@@ -116,7 +116,7 @@ with st.sidebar:
     st.caption("AIC354 · Machine Learning Fundamentals · Assignment 2")
     st.divider()
     st.markdown("**Model**  \nSupport Vector Classifier (SVC)")
-    st.markdown("**Data**  \nKaggle Heart Disease (Cleveland), 303 patients")
+    st.markdown("**Data**  \nUCI Heart Disease (Cleveland), 297 patients")
     st.markdown("**Inputs**  \n4 attributes: Gender, Exercise Angina, ST Depression, Major Vessels")
     st.markdown("**Output**  \nHeart disease: Yes / No")
     st.divider()
@@ -130,7 +130,7 @@ st.markdown(
       <h1>❤️ Heart Disease Predictor</h1>
       <p>Enter four clinical details and the trained machine learning model predicts whether heart disease is present.</p>
       <span class="pill">SVC model</span><span class="pill">4 input attributes</span>
-      <span class="pill">Test accuracy 79%</span><span class="pill">Streamlit Cloud</span>
+      <span class="pill">Test accuracy 80%</span><span class="pill">Streamlit Cloud</span>
     </div>
     """,
     unsafe_allow_html=True,
@@ -213,18 +213,18 @@ with tab_predict:
 # Tab 2: Model performance (values from the notebook, Step 7)
 # ---------------------------------------------------------------------------
 with tab_model:
-    st.markdown("#### Results on the held-out test set (61 patients)")
+    st.markdown("#### Results on the held-out test set (60 patients)")
     m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Accuracy", "0.79")
-    m2.metric("Precision", "0.79")
-    m3.metric("Recall", "0.79")
-    m4.metric("F1-score", "0.79")
+    m1.metric("Accuracy", "0.80")
+    m2.metric("Precision", "0.80")
+    m3.metric("Recall", "0.80")
+    m4.metric("F1-score", "0.80")
 
     c1, c2 = st.columns(2, gap="large")
     with c1:
         st.markdown("**Model comparison (accuracy)**")
         st.bar_chart(
-            pd.DataFrame({"Accuracy": [0.79, 0.70, 0.80]},
+            pd.DataFrame({"Accuracy": [0.80, 0.70, 0.82]},
                          index=["SVC (deployed)", "Logistic Regression", "Decision Tree"]),
             color="#ff4d6d",
         )
@@ -232,13 +232,13 @@ with tab_model:
         st.markdown("**Confusion matrix (SVC)**")
         st.dataframe(
             pd.DataFrame(
-                [[24, 8], [5, 24]],
+                [[25, 7], [5, 23]],
                 index=["Actual: No disease", "Actual: Disease"],
                 columns=["Predicted: No disease", "Predicted: Disease"],
             ),
             width="stretch",
         )
-        st.caption("24 + 24 correct predictions, 8 false alarms, 5 missed cases (recall for disease = 0.83).")
+        st.caption("25 + 23 correct predictions, 7 false alarms, 5 missed cases (recall for disease = 0.82).")
 
 # ---------------------------------------------------------------------------
 # Tab 3: How it works
@@ -246,10 +246,10 @@ with tab_model:
 with tab_help:
     st.markdown("#### The machine learning cycle used in this project")
     steps = [
-        ("1 · Data", "Kaggle Heart Disease dataset (Cleveland, 303 patients); 4 attributes selected."),
+        ("1 · Data", "UCI Heart Disease dataset (Cleveland, 297 patients after removing 6 rows with missing values); 4 attributes selected."),
         ("2 · Encode", "Text values converted to numbers with scikit-learn LabelEncoder."),
-        ("3 · Train", "Support Vector Classifier trained on 80% of the data (242 patients)."),
-        ("4 · Test", "Evaluated on the unseen 20% (61 patients): accuracy 0.79."),
+        ("3 · Train", "Support Vector Classifier trained on 80% of the data (237 patients)."),
+        ("4 · Test", "Evaluated on the unseen 20% (60 patients): accuracy 0.80."),
         ("5 · Apply", "This app: your input is encoded the same way and sent to the saved model."),
         ("6 · Feedback", "Results are reviewed and the model is improved in the next version."),
     ]
