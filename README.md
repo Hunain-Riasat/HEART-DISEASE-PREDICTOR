@@ -19,15 +19,15 @@ The project follows a complete machine learning workflow, starting from data loa
 | **Registration No.**       | FA24-BSE-083                                |
 | **Instructor**             | Dr. Rao Muhammad Adeel Nawab                |
 | **Machine Learning Model** | Support Vector Classifier (SVC)             |
-| **Dataset**                | Kaggle Heart Disease — Cleveland Dataset    |
+| **Dataset**                | UCI Heart Disease — Cleveland Dataset       |
 | **Application**            | Streamlit                                   |
-| **Test Accuracy**          | **79%**                                     |
+| **Test Accuracy**          | **80%**                                     |
 
 ---
 
 ## Project Overview
 
-The objective of this project is to build a machine learning system that predicts whether a patient is likely to have heart disease based on selected attributes from the **Kaggle Heart Disease (Cleveland)** dataset.
+The objective of this project is to build a machine learning system that predicts whether a patient is likely to have heart disease based on selected attributes from the **UCI Heart Disease (Cleveland)** dataset.
 
 The implementation follows the workflow specified for the assignment:
 
@@ -74,7 +74,7 @@ These attributes are processed and encoded before being provided to the trained 
 
 ## Dataset
 
-The project uses the **Heart Disease — Cleveland** dataset available through Kaggle.
+The project uses the **Heart Disease — Cleveland** dataset from the **UCI Machine Learning Repository** (https://archive.ics.uci.edu/dataset/45/heart+disease).
 
 The original dataset contains multiple clinical attributes related to cardiovascular health. For this assignment, a subset of four features was selected for the prediction system.
 
@@ -84,10 +84,10 @@ The project directory contains the dataset and the processed/encoded versions us
 
 The data processing workflow includes:
 
-1. Loading the dataset using Pandas (Kaggle `heart.csv`, 303 patients).
+1. Loading the dataset using Pandas (UCI `processed.cleveland.data`; 303 patients, 6 rows with missing values removed = 297).
 2. Inspecting the available columns and data.
 3. Selecting the required input features.
-4. Converting the values into text categories (Male/Female, Yes/No, Absent/Mild/High, Zero-Three) and correcting the target so that `Yes` = heart disease present.
+4. Converting the values into text categories (Male/Female, Yes/No, Absent/Mild/High, Zero-Three) removing the 6 rows with missing values, and converting the target so that `Yes` = heart disease present (`num` 1-4).
 5. Encoding categorical features into numerical representations.
 6. Preparing the target variable.
 7. Splitting the data into training and testing sets.
@@ -123,22 +123,22 @@ This saved model is then loaded by the Streamlit application so that predictions
 
 ## Model Performance
 
-The model was evaluated using a held-out test set containing **61 patients**.
+The model was evaluated using a held-out test set containing **60 patients**.
 
 ### Test Results
 
 | Metric        |          Score |
 | ------------- | -------------: |
-| **Accuracy**  | **0.79 (79%)** |
-| **Precision** |       **0.79** |
-| **Recall**    |       **0.79** |
-| **F1-Score**  |       **0.79** |
+| **Accuracy**  | **0.80 (80%)** |
+| **Precision** |       **0.80** |
+| **Recall**    |       **0.80** |
+| **F1-Score**  |       **0.80** |
 
 ### Accuracy
 
-The model achieved approximately **79% accuracy** on the test dataset.
+The model achieved approximately **80% accuracy** on the test dataset.
 
-This means that the model correctly classified approximately 79% of the samples in the held-out test set.
+This means that the model correctly classified approximately 80% of the samples in the held-out test set.
 
 > The reported performance is based on the selected features, preprocessing steps, dataset split, and model configuration used in this academic project.
 
@@ -165,6 +165,7 @@ Heart-Disease-Prediction/
 ├── streamlit-app/
 │   ├── app.py
 │   ├── svc_trained_model.pkl
+│   ├── sample-data.csv
 │   ├── requirements.txt
 │   ├── runtime.txt
 │   ├── .streamlit/config.toml
@@ -197,7 +198,6 @@ The resulting prediction is then displayed to the user.
 
 **[Heart Disease Prediction — Streamlit App](https://heart-disease-hunain.streamlit.app/)**
 
-> Replace the URL above with the final Streamlit deployment URL if the application is redeployed under a different address.
 
 ---
 
@@ -206,8 +206,8 @@ The resulting prediction is then displayed to the user.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/Hunain-Riasat/HEART-DISEASE-PREDICTOR.git
+cd HEART-DISEASE-PREDICTOR
 ```
 
 ### 2. Create a Virtual Environment
