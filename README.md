@@ -3,9 +3,9 @@
 An end-to-end **Machine Learning project for heart disease prediction**, developed as part of **Machine Learning Fundamentals (AIC354), Assignment ** at **COMSATS University Islamabad, Lahore Campus**.
 
 The project follows a complete machine learning workflow, starting from data loading and preprocessing and ending with a deployed Streamlit web application.
+### Live Demo
 
-> **Educational project only:** This system is developed for academic and learning purposes. It is **not a medical diagnostic tool** and should not be used for making real-world medical decisions.
-
+**[Heart Disease Prediction — Streamlit App](https://heart-disease-hunain.streamlit.app/)**
 ---
 
 ## Project Information
