@@ -1,6 +1,6 @@
 # Heart Disease Prediction — End-to-End Machine Learning System
 
-An end-to-end **Machine Learning project for heart disease prediction**, developed as part of **Machine Learning Fundamentals (AIC354), Assignment ** at **COMSATS University Islamabad, Lahore Campus**.
+An end-to-end **Machine Learning project for heart disease prediction**, developed as part of **Machine Learning Fundamentals (AIC354), Assignment 2** at **COMSATS University Islamabad, Lahore Campus**.
 
 The project follows a complete machine learning workflow, starting from data loading and preprocessing and ending with a deployed Streamlit web application.
 
@@ -196,7 +196,7 @@ The resulting prediction is then displayed to the user.
 
 ### Live Demo
 
-**[Heart Disease Prediction — Streamlit App](https://heart-disease-hunain.streamlit.app/)**
+**[Heart Disease Prediction — Streamlit App](https://heart-disease-hunain-uci.streamlit.app/)**
 
 
 ---
